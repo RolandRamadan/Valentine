@@ -37,7 +37,7 @@ export class Rejection2Page implements OnInit, OnDestroy {
   });
 
   protected noBtnMsg = computed(() => {
-    return this.isChanged() || this.isAccepted() ? "YESS I WILL BE YOUR VALENTINE" : "I am sorry but I have to"; 
+    return this.isChanged() || this.isAccepted() ? "YES, I'll be your Valentine" : "I am sorry but I have to"; 
   })
 
   constructor(private router: Router) {}

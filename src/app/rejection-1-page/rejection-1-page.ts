@@ -17,7 +17,7 @@ export class Rejection1Page implements OnInit, OnDestroy {
   private rejectedGifUrl = signal<string>(this.commonService.heartBrokenImage);
   private acceptedGifUrl = signal<string>(this.commonService.horrayImage);
 
-  protected isAccepted = signal<boolean>(true);
+  protected isAccepted = signal<boolean | null>(null);
   protected clicked = signal<boolean>(false);
 
   protected gifUrl = computed(() => {
