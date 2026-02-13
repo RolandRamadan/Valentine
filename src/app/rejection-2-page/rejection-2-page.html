@@ -1,0 +1,6 @@
+<img class="gif" [src]="gifUrl()" alt="cute bear gif" />
+<h1>Please don't do this to me 😭</h1>
+<div class="button-wrapper">
+  <button class="yes-btn" [disabled]="clicked()" (click)="handleYesClick()">You are right, I am sorry!</button>
+  <button [ngClass]="noBtnClass()" (mouseenter)="isChanged.set(true)" (mouseleave)="isChanged.set(false)" [disabled]="clicked()" (click)="handleNoClick()">{{noBtnMsg()}}</button>
+</div>

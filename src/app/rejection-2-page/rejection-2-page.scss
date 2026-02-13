@@ -1,0 +1,77 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fdefee;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; // to hide elements before they slide in
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.gif {
+  border-radius: 20px;
+  height: 200px;
+  width: 200px;
+  animation: slide-in-top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #e94d6c;
+  animation: slide-in-top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s both;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #e94d6c;
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 20px;
+  animation: slide-in-bottom 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.9s both;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.yes-btn {
+  background-color: #28a745;
+  color: white;
+  transform-origin: center;
+}
+
+.no-btn {
+  background-color: #dc3545;
+  color: white;
+}

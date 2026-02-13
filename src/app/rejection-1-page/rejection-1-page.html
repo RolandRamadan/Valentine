@@ -1,0 +1,6 @@
+<img class="gif" [src]="gifUrl()" alt="cute bear gif" />
+<h1>Are you sure? 🥺</h1>
+<div class="button-wrapper">
+  <button class="yes-btn" [disabled]="clicked()" (click)="handleYesClick()">No, I want you!</button>
+  <button class="no-btn" [disabled]="clicked()" (click)="handleNoClick()">Yes, I am sure</button>
+</div>

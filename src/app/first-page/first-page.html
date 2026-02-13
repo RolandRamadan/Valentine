@@ -1,0 +1,15 @@
+@if (showSplash()) {
+  <div class="splash-container">
+    <img [src]="commonService.coolBoyfriendImage" alt="cute boyfriend gif" />
+    <p>Made with Love from your</p>
+    <h2>Boyfriend ❤️</h2>
+  </div>
+} @else {
+  <img class="gif" [src]="gifUrl()" alt="cute bear gif" />
+  <h1>Will you be my Valentine? ❤️</h1>
+  <div class="button-wrapper">
+    <button class="yes-btn" [disabled]="clicked()" (click)="handleYesClick()">Yes</button>
+    <button class="no-btn" [disabled]="clicked()" (click)="handleNoClick()">No</button>
+  </div>
+}
+  
